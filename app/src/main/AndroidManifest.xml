@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FactoryActivity"/>
+        <activity android:name=".HttpActivity"/>
     </application>
 
 </manifest>

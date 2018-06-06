@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mBtnFactory;
     @InjectView(R.id.btn_factory2)
     Button mBtnFactory2;
+    @InjectView(R.id.btn_http)
+    Button mBtnHttp;
+    @InjectView(R.id.btn_http2)
+    Button mBtnHttp2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initListener() {
         mBtnFactory.setOnClickListener(this);
         mBtnFactory2.setOnClickListener(this);
+        mBtnHttp.setOnClickListener(this);
+        mBtnHttp2.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_factory2:
                 FactoryActivity.actionStart(this, 2);
+                break;
+            case R.id.btn_http:
+                HttpActivity.actionStart(this);
+                break;
+            case R.id.btn_http2:
+
                 break;
         }
     }
