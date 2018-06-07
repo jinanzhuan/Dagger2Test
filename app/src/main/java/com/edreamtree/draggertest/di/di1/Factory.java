@@ -1,4 +1,6 @@
-package com.edreamtree.draggertest.di;
+package com.edreamtree.draggertest.di.di1;
+
+import com.edreamtree.draggertest.di.Product;
 
 import javax.inject.Inject;
 

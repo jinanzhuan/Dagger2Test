@@ -1,6 +1,7 @@
-package com.edreamtree.draggertest.di;
+package com.edreamtree.draggertest.di.di2;
 
 import com.edreamtree.draggertest.HttpActivity;
+import com.edreamtree.draggertest.di.HttpActivityModule;
 
 import dagger.Component;
 

@@ -2,7 +2,6 @@ package com.edreamtree.draggertest.di;
 
 import dagger.Module;
 import dagger.Provides;
-import okhttp3.OkHttpClient;
 
 /**
  * <pre>
@@ -16,9 +15,21 @@ import okhttp3.OkHttpClient;
 
 @Module
 public class HttpActivityModule {
+    private int cacheSize;
+
+    public HttpActivityModule(int cacheSize) {
+        this.cacheSize = cacheSize;
+    }
 
     @Provides
     OkHttpClient provideOkHttpClient(){
-        return new OkHttpClient();
+        OkHttpClient client = new OkHttpClient();
+        client.setCacheSize(cacheSize);
+        return client;
+    }
+
+    @Provides
+    RetrofitManager provideRetrofitManager(OkHttpClient client){
+        return new RetrofitManager(client);
     }
 }

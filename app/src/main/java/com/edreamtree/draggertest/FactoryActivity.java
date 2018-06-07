@@ -7,9 +7,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.edreamtree.draggertest.di.DaggerFactoryActivityComponent;
-import com.edreamtree.draggertest.di.Factory;
 import com.edreamtree.draggertest.di.Product;
+import com.edreamtree.draggertest.di.di1.DaggerFactoryActivityComponent;
+import com.edreamtree.draggertest.di.di1.Factory;
 
 import javax.inject.Inject;
 
